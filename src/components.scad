@@ -44,7 +44,7 @@ oled_screen_y = 16.70;
 //OLED PCB Hole
 oled_pcb_hole_radius = 4;
 //OLED PCB Holes distance (from its center)
-oled_pcb_hole_distance_x = 31.50;
+oled_pcb_hole_distance_x = 31.42;
 oled_pcb_hole_distance_Y = 29.70;
 
 // JLF mount dimensions
@@ -115,9 +115,20 @@ module top_plate_holes() {
 
 //1.3 Inch OLED Display module, only the screen is exposed, it includes small cylinders for the pcb holes
 module oled_display(){
-    square([oled_screen_x, oled_screen_y],center=true);
-    cylinder(h= 5, r=oled_pcb_hole_radius, center = true);
-    
+    //oled screen
+    translate([0,0,1.3])
+    cube([oled_screen_x, oled_screen_y, 1.3],center=true);
+    //oledPCB
+    cube([33.50, 33.50, 1.3], center=true);
+        //holes
+        translate([oled_pcb_hole_distance_x/2,oled_pcb_hole_distance_Y/2,0])
+            cylinder(h= 1.3, r=oled_pcb_hole_radius, center = true);
+        translate([-oled_pcb_hole_distance_x/2,oled_pcb_hole_distance_Y/2,0])
+            cylinder(h= 1.3, r=oled_pcb_hole_radius, center = true);
+        translate([oled_pcb_hole_distance_x/2,-oled_pcb_hole_distance_Y/2,0])
+            cylinder(h= 1.3, r=oled_pcb_hole_radius, center = true);
+        translate([-oled_pcb_hole_distance_x/2,-oled_pcb_hole_distance_Y/2,0])
+            cylinder(h= 1.3, r=oled_pcb_hole_radius, center = true);
 }
 
 
