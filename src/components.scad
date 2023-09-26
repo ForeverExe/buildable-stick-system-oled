@@ -37,6 +37,16 @@ small_button_radius = 12 + hole_tolerance;
 // 30mm button
 big_button_radius = 15 + hole_tolerance;
 
+// OLED Display dimensions (Screen Only)
+oled_screen_x = 31.50;
+oled_screen_y = 16.70;
+
+//OLED PCB Hole
+oled_pcb_hole_radius = 4;
+//OLED PCB Holes distance (from its center)
+oled_pcb_hole_distance_x = 31.50;
+oled_pcb_hole_distance_Y = 29.70;
+
 // JLF mount dimensions
 lever_mount_x = 53;
 lever_mount_y = 95;
@@ -101,6 +111,15 @@ module top_plate_holes() {
 	translate([-plate_to_frame_point_x, plate_to_frame_point_y, 2]) m4_hole_countersink();
 	translate([-plate_to_frame_point_x, -plate_to_frame_point_y, 2]) m4_hole_countersink();
 }
+
+
+//1.3 Inch OLED Display module, only the screen is exposed, it includes small cylinders for the pcb holes
+module oled_display(){
+    square([oled_screen_x, oled_screen_y],center=true);
+    cylinder(h= 5, r=oled_pcb_hole_radius, center = true);
+    
+}
+
 
 // button hole, with extra wide bits for various uses (cutting out space
 // for snap-ins, etc.
