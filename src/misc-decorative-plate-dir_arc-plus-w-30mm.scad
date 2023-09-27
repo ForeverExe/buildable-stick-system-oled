@@ -21,11 +21,11 @@ include <components.scad>
 module dir_arc_plus_w_30mm_decorative_plate() {
 	difference() {
 		// get a 1mm slice of the bigger button cylinders
-		translate([0, 0, -45]) dir_arc_w_30mm();
+		translate([0, 0, -45]) dir_arc_w_24mm();
 		translate([0, 0, -50]) cube([500, 500, 98], center=true);
 		translate([0, 0, 50]) cube([500, 500, 98], center=true);
 		// cut out the normal holes
-		translate([0, 0, -1]) dir_arc_w_30mm();
+		translate([0, 0, -1]) dir_arc_w_24mm();
 	}
 }
 
