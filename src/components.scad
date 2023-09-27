@@ -37,15 +37,6 @@ small_button_radius = 12 + hole_tolerance;
 // 30mm button
 big_button_radius = 15 + hole_tolerance;
 
-// OLED Display dimensions (Screen Only)
-oled_screen_x = 31.50;
-oled_screen_y = 16.70;
-
-//OLED PCB Hole
-oled_pcb_hole_radius = 4;
-//OLED PCB Holes distance (from its center)
-oled_pcb_hole_distance_x = 31.42;
-oled_pcb_hole_distance_Y = 29.70;
 
 // JLF mount dimensions
 lever_mount_x = 53;
@@ -308,6 +299,7 @@ module frame() {
 	}
 }
 
+
 /* LAYOUTS */
 
 // Directional Arc (both hands)
@@ -401,6 +393,13 @@ module sega_2p() {
 	sega_2p_6_button();
 	translate([30.5+36+36, 11, 0]) sega_2p_p1();
 	translate([30.5+36+36, -19-9, 0]) sega_2p_p1();
+}
+
+//just for preferences, it is a straightened version of sega_2p
+module str_sega_2p(){
+    sega_2p_6_button();
+	translate([30.5+36+36, 19, 0]) sega_2p_p1();
+	translate([30.5+36+36, -19, 0]) sega_2p_p1();
 }
 
 module sega_2p_plus_one() {
