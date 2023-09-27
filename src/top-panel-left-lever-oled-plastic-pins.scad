@@ -20,7 +20,7 @@ include <components.scad>
 include <oled_display.scad>
 
 // combine the lever mount and generic plate, with mounting holes
-module top_panel_left_lever() {
+module top_panel_left_lever_oled() {
 	difference() {
 		// base plate
         difference(){
@@ -42,4 +42,4 @@ module top_panel_left_lever() {
        OLED_Display_pins();
 }
 
-top_panel_left_lever();
+top_panel_left_lever_oled();
