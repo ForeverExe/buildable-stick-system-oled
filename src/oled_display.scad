@@ -1,4 +1,4 @@
-//DIMENSIONI PCB
+//PCB DIMENSIONS
 oled_pcb_x = 35.50;
 oled_pcb_y = 33.70;
 oled_pcb_z = 1.3;
@@ -6,7 +6,7 @@ oled_pcb_hole_diameter =2.5;
 oled_pcb_hole_x = 31.42;
 oled_pcb_hole_y = 29.70;
 
-//DIMENSIONI SCHERMO
+//DISPLAY DIMENSIONS
 oled_display_x = 31.50;
 oled_display_y = 16.70;
 oled_display_z = 1.3;
@@ -26,6 +26,7 @@ module oled_display_setup(_oled_pcb_x, _oled_pcb_y, _oled_pcb_z, _oled_pcb_hole_
     oled_display_z = _oled_display_z;
 };
 
+//since there's the possibility to have the pins printed, I've divided the two
 module OLED_Display_pcb(){
     //oled PCB for difference()  
     color("Blue", 1)
