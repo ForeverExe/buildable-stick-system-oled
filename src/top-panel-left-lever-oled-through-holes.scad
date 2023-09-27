@@ -29,14 +29,19 @@ module top_panel_left_lever() {
 			translate([0, 0, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
            }
            //move this to heart's (and geometry) content
-            translate([-80,35,-0.8]) 
-                OLED_Display();
+            translate([-80,35,-0.8]){ 
+                OLED_Display_pcb();
+                OLED_Display_pins();
+            }
        }
         
 		// holes to mount the lever
 		levermountholes();
 		side_chopper();
 	}
+    
+    //translate([-80,35,-2]) 
+       
 }
 
 top_panel_left_lever();

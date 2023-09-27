@@ -112,26 +112,6 @@ module top_plate_holes() {
 	translate([-plate_to_frame_point_x, -plate_to_frame_point_y, 2]) m4_hole_countersink();
 }
 
-
-//1.3 Inch OLED Display module, only the screen is exposed, it includes small cylinders for the pcb holes
-module oled_display(){
-    //oled screen
-    translate([0,0,1.3])
-    cube([oled_screen_x, oled_screen_y, 1.3],center=true);
-    //oledPCB
-    cube([33.50, 33.50, 1.3], center=true);
-        //holes
-        translate([oled_pcb_hole_distance_x/2,oled_pcb_hole_distance_Y/2,0])
-            cylinder(h= 1.3, r=oled_pcb_hole_radius, center = true);
-        translate([-oled_pcb_hole_distance_x/2,oled_pcb_hole_distance_Y/2,0])
-            cylinder(h= 1.3, r=oled_pcb_hole_radius, center = true);
-        translate([oled_pcb_hole_distance_x/2,-oled_pcb_hole_distance_Y/2,0])
-            cylinder(h= 1.3, r=oled_pcb_hole_radius, center = true);
-        translate([-oled_pcb_hole_distance_x/2,-oled_pcb_hole_distance_Y/2,0])
-            cylinder(h= 1.3, r=oled_pcb_hole_radius, center = true);
-}
-
-
 // button hole, with extra wide bits for various uses (cutting out space
 // for snap-ins, etc.
 module button_24mm_hole() {
