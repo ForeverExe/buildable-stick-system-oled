@@ -1,18 +1,23 @@
-# The Buildable Stick System
+# The Buildable Stick System (oled+ fork)
 
 Files for 3D printing an arcade stick.
 
 ![An example of stick components displayed in OpenSCAD](docs/two-panel-example-v3.png)
+![An example of stick components displayed in OpenSCAD](docs/two-panel-hitbox-layout-example.png)
+![An example of stick components displayed in OpenSCAD](docs/two-panel-oled-lever-example.png)
 
 Originally an attempt to make a couple customized STL files for the [OpenStickCommunity Fightstick
 Case](https://github.com/OpenStickCommunity/Hardware/tree/main/Fightstick%20Case), the changes ballooned to fit my
 design and became incompatible with that project's components. This should be considered a different project with some
 similar DNA, but to stress again, it could not have been done without that project as a guide star. See **Attribution**.
 
+_Now with this fork my changes balooned a bit too, and from wanting to just have an oled window on bss' very cool system, now I'm working to add a standard hitbox layout_
+_(which was strangely missing in my opinion), an oled window in almost every useful place, and a somewhat big change that I don't know when I, He or someone else, will do it, see `TODO.md`._
+
 ## Designing
 
 No particular arcade stick design is prescribed by this project, instead, SCAD files are provided to choose desired
-component objects or create new ones. The OpenSCAD language is essentially a functional programming language, making it
+component objects or create new ones. The [OpenSCAD](https://openscad.org/index.html) language is essentially a functional programming language, making it
 it easy to reuse, alter, and compose objects. If you do not see the object you would like, you can likely create it by
 starting with an existing object and constructing what you'd like with new or existing components.
 
@@ -102,6 +107,8 @@ Made possible by the amazing efforts of [slagcoin](https://www.slagcoin.com/).
 ## Author and Licensing
 
 Written by and copyright Brian S. Stephan (<bss@incorporeal.org>).
+
+Forked by Matteo "Forever.exe" Besutti (<untizio.exe@gmail.com>)
 
 The Buildable Stick System is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
 License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
