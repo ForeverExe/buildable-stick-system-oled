@@ -18,11 +18,12 @@
 
 include <components.scad>
 
-module dir_arc_24mm_6_button_panel() {
-	difference() {
-		top_plate_with_raised_overhang();
-		dir_arc_24mm_6_button();
-	}
+module top_panel_right_hitbox_6_buttons(){
+    difference(){
+        top_plate_with_raised_overhang();
+        translate([30,-30,0])
+            sega_2p();
+    }
 }
 
-dir_arc_24mm_6_button_panel();
+top_panel_right_hitbox_6_buttons();
