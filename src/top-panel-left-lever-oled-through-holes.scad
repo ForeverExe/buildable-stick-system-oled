@@ -17,7 +17,6 @@
  */
 
 include <components.scad>
-include <oled_display.scad>
 
 // combine the lever mount and generic plate, with mounting holes
 module top_panel_left_lever() {
