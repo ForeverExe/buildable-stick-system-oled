@@ -53,7 +53,6 @@ color("black") translate([0, 0, 3+frame_z/2+150]){
 }
 color("black") translate([-195, 25, 3+frame_z/2+150]){ 
     //lsx_nobi_dustwasher();
-    translate([])
         dir_arc_24mm_directionals_decorative_plate();
 }
 color("black") translate([top_plate_x, 25, 3+frame_z/2+150]){
