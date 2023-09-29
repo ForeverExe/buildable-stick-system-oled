@@ -17,7 +17,10 @@
  */
 
 include <components.scad>
-include <oled_display.scad>
+
+//change if you want drilled points
+oled = true;
+oled_pins = true;
 
 // combine the lever mount and generic plate, with mounting holes
 module top_panel_left_lever_oled() {
@@ -28,9 +31,14 @@ module top_panel_left_lever_oled() {
 			translate([0,-20,0]) top_plate_with_raised_overhang();
 			translate([0, 0, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
            }
-           //move this to heart's (and geometry) content
-            translate([-80,35,-0.8]) 
+           if(oled){
+            //change to hearts content
+            translate([-70, -10, -0.5]){
                 OLED_Display_pcb();
+                if(!oled_pins)
+                    OLED_Display_pins();
+            }
+        }
        }
         
 		// holes to mount the lever
@@ -38,8 +46,10 @@ module top_panel_left_lever_oled() {
 		side_chopper();
 	}
     
-    translate([-80,35,-2]) 
-       OLED_Display_pins();
+    if(oled_pins){
+                translate([-70, -10, -1.8])
+                OLED_Display_pins();
+            }
 }
 
 top_panel_left_lever_oled();

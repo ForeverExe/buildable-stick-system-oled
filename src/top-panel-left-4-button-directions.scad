@@ -18,12 +18,29 @@
 
 include <components.scad>
 
+oled = true;
+oled_pins = true;
+
 module top_panel_hitbox_directions(){
     difference(){
-        top_plate_with_raised_overhang();
-        translate([-36, 30,0])
-            dir_arc_24mm_directionals();
+        difference(){
+            top_plate_with_raised_overhang();
+            translate([-36, 30,0])
+                dir_arc_24mm_directionals();
+        }   
+        if(oled){
+            //change to hearts content
+            translate([-70, -10, -0.5]){
+                OLED_Display_pcb();
+                if(!oled_pins)
+                    OLED_Display_pins();
+            }
+        }
     }
+            if(oled_pins){
+                translate([-70, -10, -1.8])
+                OLED_Display_pins();
+            }
 }
 
 top_panel_hitbox_directions();
