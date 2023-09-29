@@ -33,7 +33,6 @@ color("black") translate([-195, 25, 3+frame_z/2+50]){
 color("black") translate([top_plate_x, 25, 3+frame_z/2+50]){
     translate([-70,-20,0])
         hitbox_r_24mm_decorative_plate();
-    button_24mm_decorative_plate();
 }
 
 
