@@ -1,10 +1,9 @@
-# The Buildable Stick System (oled+ fork)
+# The Buildable Stick System ("oled+" fork)
 
 Files for 3D printing an arcade stick.
 
-![An example of stick components displayed in OpenSCAD](docs/two-panel-example-v3.png)
-![An example of stick components displayed in OpenSCAD](docs/two-panel-hitbox-layout-example.png)
-![An example of stick components displayed in OpenSCAD](docs/two-panel-oled-lever-example.png)
+**\[[GALLERY](README.md#gallery) AT THE BOTTOM]**
+
 
 Originally an attempt to make a couple customized STL files for the [OpenStickCommunity Fightstick
 Case](https://github.com/OpenStickCommunity/Hardware/tree/main/Fightstick%20Case), the changes ballooned to fit my
@@ -12,7 +11,7 @@ design and became incompatible with that project's components. This should be co
 similar DNA, but to stress again, it could not have been done without that project as a guide star. See **Attribution**.
 
 _Now with this fork my changes balooned a bit too, and from wanting to just have an oled window on bss' very cool system, now I'm working to add a standard hitbox layout_
-_(which was strangely missing in my opinion), an oled window in almost every useful place, and a somewhat big change that I don't know when I, He or someone else, will do it, see `TODO.md`._
+_(which was strangely missing in my opinion), an oled window in almost every useful place, and a somewhat big change that I don't know when I, He or someone else, will do it, see [TODO.md](TODO.md)._
 
 ## Designing
 
@@ -81,12 +80,12 @@ full-featured controller with an open source foundation together for around $135
 
 ## Miscellany
 
-See the `/docs/` directory for more thoughts too scattered for this document.
+See the [docs](docs/) directory for more thoughts too scattered for this document.
 
 ## Issues and Limitations
 
 This is a living repository, and as such, there are likely issues with the objects, known or otherwise.
-These issues may be fixed in the future; see `TODO.md` for details.
+These issues may be fixed in the future; see [TODO.md](TODO.md) for details.
 
 ## Development and Contributing
 
@@ -106,9 +105,9 @@ Made possible by the amazing efforts of [slagcoin](https://www.slagcoin.com/).
 
 ## Author and Licensing
 
-Written by and copyright Brian S. Stephan (<bss@incorporeal.org>).
+**Written by and copyright Brian S. Stephan (<bss@incorporeal.org>).**
 
-Forked by Matteo "Forever.exe" Besutti (<untizio.exe@gmail.com>)
+**Forked by Matteo "Forever.exe" Besutti (<untizio.exe@gmail.com>)**
 
 The Buildable Stick System is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
 License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
@@ -119,3 +118,11 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gen
 
 You should have received a copy of the GNU General Public License along with the Buildable Stick System. If not, see
 <https://www.gnu.org/licenses/>.
+
+
+## Gallery
+
+![An example of stick components displayed in OpenSCAD](docs/two-panel-example-v3.png)
+![An example of stick with oled components displayed in OpenSCAD](docs/two-panel-oled-lever-example.png)
+![An example of hitbox components displayed in OpenSCAD](docs/two-panel-hitbox-layout-example.png)
+![An example of shorter frames displayed in OpenSCAD](docs\two-panel-example-slim-hitbox.png)
