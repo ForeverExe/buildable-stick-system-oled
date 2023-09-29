@@ -125,4 +125,4 @@ You should have received a copy of the GNU General Public License along with the
 ![An example of stick components displayed in OpenSCAD](docs/two-panel-example-v3.png)
 ![An example of stick with oled components displayed in OpenSCAD](docs/two-panel-oled-lever-example.png)
 ![An example of hitbox components displayed in OpenSCAD](docs/two-panel-hitbox-layout-example.png)
-![An example of shorter frames displayed in OpenSCAD](docs\two-panel-example-slim-hitbox.png)
+![An example of shorter frames displayed in OpenSCAD](docs/two-panel-example-slim-hitbox.png)
