@@ -39,6 +39,9 @@ oled_display_z = 1.3;
 // adjustments
 hole_tolerance = 0.15;
 
+//switch side
+switch_side = 12 + hole_tolerance;
+
 // M3
 m3_screw_selftap_radius = 1.3;
 
@@ -190,6 +193,20 @@ module button_30mm_hole() {
 	translate([0, 0, 50]) cylinder(r=big_button_radius+decorative_radius, h=20, $fn=50, center=true);
 	translate([0, 0, 70]) cylinder(r=big_button_radius+jumbo_decorative_radius, h=20, $fn=50, center=true);
 }
+
+//switch socket with a 24mm rounded hole
+module switch_socket_24mm(){
+	translate([0,0,5])
+    	cylinder(r=small_button_radius, h=6, $fn=50, center=true);
+	cube([switch_side, switch_side, switch_side+1],center = true);
+}
+//switch socket with a 30mm rounded hole
+module switch_socket_30mm(){
+	translate([0,0,5])
+    	cylinder(r=big_button_radius, h=6, $fn=50, center=true);
+	cube([switch_side, switch_side, switch_side+1],center = true);
+}
+
 
 module frame_hex_bolt_hole() {
 	scale([1, 1, 2]) cylinder(r=m4_bolt_hex_exterior_radius, h=frame_z, $fn=6, center=true);
@@ -374,7 +391,6 @@ module dir_arc_24mm_directionals() {
 }
 
 module dir_arc_24mm_6_button() {
-	dir_arc_24mm_directionals();
 	translate([29.5+26.3+15.5+9.7+2.6, 0, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5+9.7+2.6+26.9, 10.9, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9, 0]) button_24mm_hole();
@@ -412,6 +428,13 @@ module dir_arc_w_30mm() {
 module dir_arc_w_30mm_plus_one() {
 	dir_arc_w_30mm();
 	translate([-5.4-33.8-34.8-33.8, 52.2, 0]) dir_arc_30mm_thumb_button();
+}
+
+module switch_hole_4_directionals(){
+	switch_socket_24mm();
+	translate([29.5, 0, 0]) switch_socket_24mm();
+	translate([29.5+26.3, -12.9, 0]) switch_socket_24mm();
+	translate([29.5+26.3+15.5, -65.2, 0]) switch_socket_30mm();
 }
 
 // Namco Noir (right hand)
@@ -468,4 +491,27 @@ module sega_2p_plus_one() {
 	sega_2p();
 	// just my guesstimate on this one
 	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
+}
+
+module switch_6_button() {
+	// via slagcoin
+	switch_socket_24mm();
+	translate([30.5, 11+9, 0]) switch_socket_24mm();
+	translate([30.5+36, 11+9, 0]) switch_socket_24mm();
+	translate([0, -19-9-11, 0]) switch_socket_24mm();
+	translate([30.5, -19, 0]) switch_socket_24mm();
+	translate([30.5+36, -19, 0]) switch_socket_24mm();
+}
+
+module switch_hitbox_8_buttons(){
+    switch_6_button();
+	translate([30.5+36+36, 19, 0]) switch_socket_24mm();
+	translate([30.5+36+36, -19, 0]) switch_socket_24mm();
+}
+
+module switch_sega_2p() {
+	translate([-60,0,0])
+		switch_6_button();
+	translate([30.5+9, 11, 0]) switch_socket_24mm();
+	translate([30.5+9, -31, 0]) switch_socket_24mm();
 }

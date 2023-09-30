@@ -20,14 +20,20 @@ include <components.scad>
 
 oled = true;
 oled_pins = true;
+switches = true;
 
 module top_panel_hitbox_directions(){
     difference(){
         difference(){
             top_plate_with_raised_overhang();
-            translate([-36, 30,0])
-                dir_arc_24mm_directionals();
-        }   
+                if(!switches)
+                    translate([-36, 30,0])
+                    dir_arc_24mm_directionals();
+                else
+                    //it should give 1.5 mm to lock it in place
+                    translate([-36, 30,-3.5])
+                    switch_hole_4_directionals();
+        }  
         if(oled){
             //change to hearts content
             translate([-70, -10, -0.5]){
