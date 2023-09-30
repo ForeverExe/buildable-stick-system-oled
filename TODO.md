@@ -12,6 +12,7 @@ Notes for "next time".
 ## Forked V4
 - [x] Add a prototype for an oled module to subtract the exact geometry
 - [x] Make the oled "selectable", it uses true-or-false IFs, better than making the same panel with 37 variants
+  - [ ] Add the oled choice to almost every plate
 - [ ] Try printing a plate with the plastic pins to see if it works (it will take a lot of time since I don't have a printer at home)
 - [x] Make a standard hitbox layout for both left and right plates
   - [x] Make the buttons decorative plates
@@ -26,6 +27,9 @@ Notes for "next time".
     - [ ] Resize the USB-B cable connector, 90% sure it'll change to a standard usb-a/c port, need to know if usb-b is needed for the lever
       - [ ] Decide whether to make a cable or plug hole 
 
-    * I'm thinking to add a keyboard hole module, so if the case is slimmer it should not be too crowded like using classic arcade buttons or something printed like OSBMX
+    - [ ] Make keyboard switch holes variants
+      - [x] Make base keyboard switch module for geometry subtraction
+      - [x] Make switch-version for hitbox layouts
+      - [ ] Make switch-version for alla sega_2p layouts
 
 - [ ] Take yet ANOTHER journey to try making the files more modular, mostly a series of true or false statements with user-defined constants on the files, like on `top-panel-left-4-button-directions.scad` and `top-panel-left-lever-oled.scad`, or by using module arguments to decide these components blown up demos. This could be a proof for some other future concepts, but I'm running wild with my fantasy for now.
