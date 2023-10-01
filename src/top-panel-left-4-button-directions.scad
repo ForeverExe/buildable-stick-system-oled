@@ -22,6 +22,9 @@ oled = true;
 oled_pins = true;
 switches = true;
 
+oled_place_x = 70;
+oled_place_y = 70;
+
 module top_panel_hitbox_directions(){
     difference(){
         difference(){
@@ -31,12 +34,12 @@ module top_panel_hitbox_directions(){
                     dir_arc_24mm_directionals();
                 else
                     //it should give 1.5 mm to lock it in place
-                    translate([-36, 30,-3.5])
+                    translate([0, 30,-3.5])
                     switch_hole_4_directionals();
         }  
         if(oled){
             //change to hearts content
-            translate([-70, -10, -0.5]){
+            translate([oled_place_x, oled_place_y, -0.5]){
                 OLED_Display_pcb();
                 if(!oled_pins)
                     OLED_Display_pins();
@@ -44,7 +47,7 @@ module top_panel_hitbox_directions(){
         }
     }
             if(oled_pins){
-                translate([-70, -10, -1.8])
+                translate([oled_place_x, oled_place_y, -1.8])
                 OLED_Display_pins();
             }
 }
