@@ -23,7 +23,6 @@ use <frame-right.scad>
 // top panels
 use <top-panel-left-lever-and-dir_arc-plus-w-30mm.scad>
 use <top-panel-right-sega-2p-plus-one-plus-control-with-mount.scad>
-use <top-panel-left-lever-oled-plastic-pins.scad>
 use <top-panel-right-hitbox-6-buttons.scad>
 use <top-panel-left-4-button-directions.scad>
 //bottom panels
