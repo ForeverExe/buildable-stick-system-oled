@@ -25,7 +25,7 @@ include <roundedcube.scad>
 oled_pcb_x = 35.50;
 oled_pcb_y = 33.70;
 oled_pcb_z = 1.3;
-oled_pcb_hole_diameter =2.5;
+oled_pcb_hole_diameter =3;
 oled_pcb_hole_x = 31.42;
 oled_pcb_hole_y = 29.70;
 

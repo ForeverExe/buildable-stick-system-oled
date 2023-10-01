@@ -19,7 +19,7 @@
 include <components.scad>
 
 oled = true;
-oled_pins = true;
+oled_pins = false;
 switches = true;
 
 oled_place_x = 70;
@@ -52,4 +52,5 @@ module top_panel_hitbox_directions(){
             }
 }
 
+//projection() translate([0,0,0]) rotate([0,0,0])
 top_panel_hitbox_directions();
