@@ -13,7 +13,9 @@ Notes for "next time".
 - [x] Add a prototype for an oled module to subtract the exact geometry
 - [x] Make the oled "selectable", it uses true-or-false IFs, better than making the same panel with 37 variants
   - [ ] Add the oled choice to almost every plate
-- [ ] Try printing a plate with the plastic pins to see if it works (it will take a lot of time since I don't have a printer at home)
+- [x] Try printing a plate with the plastic pins to see if it works
+    - After some tries, using plastic pins to lock the oled on the plate resulted in more cons than pros, I've decided to use m3 screws and block it with a bolt
+    - [ ] wait for the laser cut to be finished and see if the dimensions are good
 - [x] Make a standard hitbox layout for both left and right plates
   - [x] Make the buttons decorative plates
 
