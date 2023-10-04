@@ -45,6 +45,9 @@ What you'll need beyond these objects:
 * For Neutrik D connections:
     * 2 10mm M3 hex bolts
     * 2 M3 flange nuts
+* For the OLED Module:
+    * 4 M2 Screws
+    * 4 M2 Nuts
 * Buttons and levers as desired
 * Wiring as required
 
