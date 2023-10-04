@@ -24,7 +24,7 @@ include <roundedcube.scad>
 hole_tolerance = 0.15;
 
 //switch side
-switch_side = 12 + hole_tolerance;
+switch_side = 14.05;
 
 // M3
 m3_screw_selftap_radius = 1.3;
@@ -36,10 +36,10 @@ m4_bolt_hex_exterior_radius = 3.6 + hole_tolerance;
 
 /* OLED DISPLAY MEASURES */
 //PCB DIMENSIONS
-oled_pcb_x = 35.50;
-oled_pcb_y = 33.70;
+oled_pcb_x = 35.50 + 4; //check for measurements when you get the pcb
+oled_pcb_y = 33.70 + 4; //added a 4 mm offset for pcb space, still to check the proto without the offset
 oled_pcb_z = 1.3;
-oled_pcb_hole_diameter = m3_screw_selftap_radius;
+oled_pcb_hole_diameter = 2+hole_tolerance; //Basically, it uses m2 screws to screw the oled
 oled_pcb_hole_x = 31.42;
 oled_pcb_hole_y = 29.70;
 
