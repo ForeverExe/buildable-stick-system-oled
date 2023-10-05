@@ -26,6 +26,9 @@ hole_tolerance = 0.15;
 //switch side
 switch_side = 14.05;
 
+// M2
+m2_screw_radius = 1+hole_tolerance;
+
 // M3
 m3_screw_selftap_radius = 1.3;
 
@@ -241,11 +244,25 @@ module m3_mount_post() {
 	}
 }
 
+module m2_mount_post() {
+	difference() {
+		cylinder(r=m2_screw_radius*3, h=8, $fn=6, center=true);
+		cylinder(r=m2_screw_radius, h=8*2, $fn=50, center=true);
+	}
+}
+
 module pcb_mount() {
 	translate([44, 18.5, 0]) m3_mount_post();
 	translate([44, -18.5, 0]) m3_mount_post();
 	translate([-44, 18.5, 0]) m3_mount_post();
 	translate([-44, -18.5, 0]) m3_mount_post();
+}
+
+module pico_mount(){
+	translate([-2, 12.1, 0]) m2_mount_post();
+	translate([-2, 0, 0]) m2_mount_post();
+	translate([-44, 12.1, 0]) m2_mount_post();
+	translate([-44, 0, 0]) m2_mount_post();
 }
 
 /* PIECES */

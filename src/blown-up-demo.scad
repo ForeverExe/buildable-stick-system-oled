@@ -35,6 +35,7 @@ use <misc-dustwasher-lsx-nobi.scad>
 use <misc-decorative-plate-dir_arc_24mm_directionals.scad>
 use <misc-decorative-plate-hitbox-6-buttons.scad>
 
+//frames and plates
 color("#C12E1F") translate([-top_plate_x/2-25, 0, frame_z/2+75]) 
     //top_panel_left_lever_and_dir_arc_w_30mm();
     //top_panel_left_lever_oled();
@@ -46,6 +47,10 @@ color("black") translate([frame_x/2+25, 0, -2.5]) right_frame();
 color("#C12E1F") translate([-top_plate_x/2-25, 0, -5-frame_z/2-75]) bottom_panel_left();
 color("#C12E1F") translate([top_plate_x/2+25, 0, -5-frame_z/2-75]) bottom_panel_right();
 
+translate([50,-200,50])
+pico_mount();
+
+//decors
 color("black") translate([0, 0, 3+frame_z/2+150]){
    
     //dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate();
