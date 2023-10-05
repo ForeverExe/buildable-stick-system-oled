@@ -19,10 +19,9 @@
 include <components.scad>
 
 oled = true;
-oled_pins = false;
 switches = true;
 
-oled_place_x = 70;
+oled_place_x = -70;
 oled_place_y = 70;
 
 module top_panel_hitbox_directions(){
@@ -33,8 +32,8 @@ module top_panel_hitbox_directions(){
                     translate([-36, 30,0])
                     dir_arc_24mm_directionals();
                 else
-                    //it should give 1.5 mm to lock it in place
-                    translate([0, 30,-3.5])
+                    //it should give 1.5 mm thickness to lock it in place
+                    translate([27, 30,-3.5])
                     switch_hole_4_directionals();
         }  
         if(oled){
@@ -46,10 +45,6 @@ module top_panel_hitbox_directions(){
             }
         }
     }
-            if(oled_pins){
-                translate([oled_place_x, oled_place_y, -1.8])
-                OLED_Display_pins();
-            }
 }
 
 //projection() translate([0,0,0]) rotate([0,0,0])
