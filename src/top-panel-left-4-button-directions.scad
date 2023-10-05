@@ -40,8 +40,7 @@ module top_panel_hitbox_directions(){
             //change to hearts content
             translate([oled_place_x, oled_place_y, -0.5]){
                 OLED_Display_pcb();
-                if(!oled_pins)
-                    OLED_Display_pins();
+                OLED_Display_pins();
             }
         }
     }
