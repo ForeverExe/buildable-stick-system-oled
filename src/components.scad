@@ -39,16 +39,38 @@ m4_bolt_hex_exterior_radius = 3.6 + hole_tolerance;
 
 /* OLED DISPLAY MEASURES */
 //PCB DIMENSIONS
-oled_pcb_x = 35.50 + 4; //check for measurements when you get the pcb
-oled_pcb_y = 33.70 + 4; //added a 4 mm offset for pcb space, still to check the proto without the offset
+/*
+	1.3 Inches: 
+		- X: 35.50mm
+		- Y: 33.70mm
+		- Z: 1.3mm
+		- Hole_X: 31.42mm
+		- Hole_Y: 29.70mm
+		- display_x = 34.50;
+		- display_y = 23.00;
+		- display_z = 1.3;
+	0.96 Inches:
+		- X: 27.5mm
+		- Y: 27.8mm
+		- Z: 1.3mm
+		- Hole_X: 23.5mm
+		- Hole_Y: 23.8mm
+		- display_x = 26.7mm;
+		- display_y = 19.2mm;
+		- display_z = 1.3;
+
+*/
+oled_pcb_x = 35.50 + 4; //added a 4 mm offset for pcb space
+oled_pcb_y = 33.70 + 4;
 oled_pcb_z = 1.3;
-oled_pcb_hole_diameter = 2+hole_tolerance; //Basically, it uses m2 screws to screw the oled
+oled_pcb_hole_diameter = 2+hole_tolerance; //Basically, it uses m2 screws and a nut
+//Hole distance is starting from its center
 oled_pcb_hole_x = 31.42;
 oled_pcb_hole_y = 29.70;
 
 //DISPLAY DIMENSIONS
-oled_display_x = 31.50;
-oled_display_y = 16.70;
+oled_display_x = 34.50;
+oled_display_y = 23.00;
 oled_display_z = 1.3;
 /* OLED DISPLAY MEASURES */
 
@@ -137,7 +159,7 @@ module OLED_Display_pcb(){
 };
 
 module OLED_Display_pins(){
-    //cylinders for difference() holes or insertion pins
+    //cylinders for difference() holes
     translate([oled_pcb_hole_x/2, oled_pcb_hole_y/2, 0])
         cylinder(h=oled_pcb_z+7, r=oled_pcb_hole_diameter/2, $fs = 0.3 , $fa = 1, center = true);
     translate([-oled_pcb_hole_x/2, oled_pcb_hole_y/2, 0])
