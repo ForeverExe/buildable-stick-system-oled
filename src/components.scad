@@ -44,7 +44,7 @@ m4_bolt_hex_exterior_radius = 3.6 + hole_tolerance;
 		- X: 35.50mm
 		- Y: 33.70mm
 		- Z: 1.3mm
-		- Hole_X: 31.42mm
+		- Hole_X: 31.50mm
 		- Hole_Y: 29.70mm
 		- display_x = 34.50;
 		- display_y = 23.00;
@@ -66,9 +66,9 @@ m4_bolt_hex_exterior_radius = 3.6 + hole_tolerance;
 oled_pcb_x = 35.50 + 6; //added a 3 mm offset per side for pcb space
 oled_pcb_y = 33.70 + 6;
 oled_pcb_z = 1.3;
-oled_pcb_hole_diameter = 2+hole_tolerance;
+oled_pcb_hole_diameter = 3+hole_tolerance;
 //Hole distance is starting from its center
-oled_pcb_hole_x = 31.42;
+oled_pcb_hole_x = 31.50;
 oled_pcb_hole_y = 29.70;
 
 //DISPLAY DIMENSIONS
