@@ -422,13 +422,20 @@ module frame() {
 
 /* LAYOUTS */
 
-// Directional Arc (both hands)
+// Directional Arc (both hands) (sw_ means switch, so they're switch sockets)
 
 module dir_arc_24mm_directionals() {
 	button_24mm_hole();
 	translate([29.5, 0, 0]) button_24mm_hole();
 	translate([29.5+26.3, -12.9, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5, -65.2, 0]) button_30mm_hole();
+}
+
+module sw_hole_4_directionals(){
+	switch_socket_24mm();
+	translate([29.5, 0, 0]) switch_socket_24mm();
+	translate([29.5+26.3, -12.9, 0]) switch_socket_24mm();
+	translate([29.5+26.3+15.5, -65.2, 0]) switch_socket_30mm();
 }
 
 module dir_arc_24mm_6_button() {
@@ -440,6 +447,15 @@ module dir_arc_24mm_6_button() {
 	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9-30.1, 0]) button_24mm_hole();
 }
 
+module sw_dir_arc_24mm_6_button() {
+	translate([29.5+26.3+15.5+9.7+2.6, 0, 0]) switch_socket_24mm();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9, 10.9, 0]) switch_socket_24mm();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9, 0]) switch_socket_24mm();
+	translate([29.5+26.3+15.5+9.7, -29.4, 0]) switch_socket_24mm();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9-1.7, 10.9-30.1, 0]) switch_socket_24mm();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9-30.1, 0]) switch_socket_24mm();
+}
+
 // 6 button plus the normal fourth column for 8 button actually on a third row
 module dir_arc_24mm_8_button_compressed() {
 	dir_arc_24mm_6_button();
@@ -447,11 +463,20 @@ module dir_arc_24mm_8_button_compressed() {
 	translate([29.5+26.3+15.5+9.7+2.6+26.9+2.6, 40.3, 0]) button_24mm_hole();
 }
 
+module sw_dir_arc_24mm_8_button_compressed() {
+	sw_dir_arc_24mm_6_button();
+	translate([29.5+26.3+15.5+9.7+2.6+2.6, 29.4, 0]) switch_socket_24mm();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+2.6, 40.3, 0]) switch_socket_24mm();
+}
+
 // Directional Arc (left hand)
 
 module dir_arc_30mm_thumb_button() {
 	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
 	translate([(top_plate_x/2)-28.06, (-top_plate_y/2)+67, 0]) button_30mm_hole();
+}
+module sw_dir_arc_30mm_thumb_button(){
+	translate([(top_plate_x/2)-28.06, (-top_plate_y/2)+67, 0]) switch_socket_30mm();
 }
 
 module dir_arc_30mm() {
@@ -461,9 +486,21 @@ module dir_arc_30mm() {
 	translate([-5.4-33.8-34.8, 52.2+12.9, 0]) dir_arc_30mm_thumb_button();
 }
 
+module sw_dir_arc_30mm() {
+	sw_dir_arc_30mm_thumb_button();
+	translate([-5.4, 52.2, 0]) sw_dir_arc_30mm_thumb_button();
+	translate([-5.4-33.8, 52.2+12.9, 0]) sw_dir_arc_30mm_thumb_button();
+	translate([-5.4-33.8-34.8, 52.2+12.9, 0]) sw_dir_arc_30mm_thumb_button();
+}
+
 module dir_arc_w_30mm() {
 	dir_arc_30mm();
 	translate([-5.4-26.8, 52.2+12.9+34.5, 0]) dir_arc_30mm_thumb_button();
+}
+
+module sw_dir_arc_w_30mm() {
+	sw_dir_arc_30mm();
+	translate([-5.4-26.8, 52.2+12.9+34.5, 0]) sw_dir_arc_30mm_thumb_button();
 }
 
 module dir_arc_w_30mm_plus_one() {
@@ -471,17 +508,20 @@ module dir_arc_w_30mm_plus_one() {
 	translate([-5.4-33.8-34.8-33.8, 52.2, 0]) dir_arc_30mm_thumb_button();
 }
 
-module switch_hole_4_directionals(){
-	switch_socket_24mm();
-	translate([29.5, 0, 0]) switch_socket_24mm();
-	translate([29.5+26.3, -12.9, 0]) switch_socket_24mm();
-	translate([29.5+26.3+15.5, -65.2, 0]) switch_socket_30mm();
+module sw_dir_arc_w_30mm_plus_one() {
+	sw_dir_arc_w_30mm();
+	translate([-5.4-33.8-34.8-33.8, 52.2, 0]) sw_dir_arc_30mm_thumb_button();
 }
 
-// Namco Noir (right hand)
+
+// Namco Noir (right hand) (again, sw_ is for switch sockets)
 
 module noir_button_p1() {
 	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([35, 145, 0]) button_30mm_hole();
+}
+
+module sw_noir_button_p1() {
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([35, 145, 0]) switch_socket_30mm();
 }
 
 module noir_plus_one() {
@@ -499,10 +539,29 @@ module noir_plus_one() {
 	translate([-3.47-3.47, -78, 0]) noir_button_p1();
 }
 
+module sw_noir_plus_one() {
+	// standard 8 (all relative to the first button) (via r/fightsticks)
+	noir_button_p1();
+	translate([32.94, 7.37+4.49, 0]) sw_noir_button_p1();
+	translate([32.94+34.54, 7.37, 0]) sw_noir_button_p1();
+	translate([32.94+34.54+33.02, -6.86, 0]) sw_noir_button_p1();
+	translate([-3.47, -6.86-19.64-4.32-7.62, 0]) sw_noir_button_p1();
+	translate([29.38, -6.86-19.64, 0]) sw_noir_button_p1();
+	translate([29.38+3.56+31.24, -6.86-19.64-4.32, 0]) sw_noir_button_p1();
+	translate([29.38+3.56+31.24+3.3+29.04, -6.86-19.64-4.32-7.62-6.93, 0]) sw_noir_button_p1();
+
+	// just my guesstimate on this one, but note that this is the same position as sega 2p
+	translate([-3.47-3.47, -78, 0]) sw_noir_button_p1();
+}
+
 // Sega Astro City 2P (right hand)
 
 module sega_2p_p1() {
 	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([28.06, 145, 0]) button_30mm_hole();
+}
+
+module sw_sega_2p_p1() {
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([28.06, 145, 0]) switch_socket_30mm();
 }
 
 module sega_2p_6_button() {
@@ -515,10 +574,26 @@ module sega_2p_6_button() {
 	translate([30.5+36, -19, 0]) sega_2p_p1();
 }
 
+module sw_sega_2p_6_button() {
+	// via slagcoin
+	sega_2p_p1();
+	translate([30.5, 11+9, 0]) sw_sega_2p_p1();
+	translate([30.5+36, 11+9, 0]) sw_sega_2p_p1();
+	translate([0, -19-9-11, 0]) sw_sega_2p_p1();
+	translate([30.5, -19, 0]) sw_sega_2p_p1();
+	translate([30.5+36, -19, 0]) sw_sega_2p_p1();
+}
+
 module sega_2p() {
 	sega_2p_6_button();
 	translate([30.5+36+36, 11, 0]) sega_2p_p1();
 	translate([30.5+36+36, -19-9, 0]) sega_2p_p1();
+}
+
+module sw_sega_2p() {
+	sw_sega_2p_6_button();
+	translate([30.5+36+36, 11, 0]) sw_sega_2p_p1();
+	translate([30.5+36+36, -19-9, 0]) sw_sega_2p_p1();
 }
 
 //just for preferences, it is a straightened version of sega_2p
@@ -528,10 +603,23 @@ module str_sega_2p(){
 	translate([30.5+36+36, -19, 0]) sega_2p_p1();
 }
 
+module sw_str_sega_2p(){
+    sw_sega_2p_6_button();
+	translate([30.5+36+36, 19, 0]) sw_sega_2p_p1();
+	translate([30.5+36+36, -19, 0]) sw_sega_2p_p1();
+}
+
+
 module sega_2p_plus_one() {
 	sega_2p();
 	// just my guesstimate on this one
 	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
+}
+
+module sw_sega_2p_plus_one() {
+	sw_sega_2p();
+	// just my guesstimate on this one
+	translate([0, -19-9-11-19-9-11, 0]) sw_sega_2p_p1();
 }
 
 module switch_6_button() {
