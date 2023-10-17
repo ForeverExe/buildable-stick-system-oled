@@ -17,11 +17,35 @@
  */
 
 include <components.scad>
+switch = true;
+oled = true;
+pico = false;
+oled_x = -60;
+oled_y = 60;
 
 module dir_arc_24mm_6_button_panel() {
 	difference() {
 		top_plate_with_raised_overhang();
-		dir_arc_24mm_6_button();
+		translate([-55,0,0])
+		if(!switch)
+			dir_arc_24mm_6_button();
+		else{
+			translate([0, 0,-3.5])
+			sw_dir_arc_24mm_6_button();
+		}
+		if(oled){
+			translate([oled_x, oled_y, -0.5]){
+					OLED_Display_pcb();
+					OLED_Display_pins();
+			}
+		}
+	}
+
+	if(pico)
+		pico_mount();
+	else{
+		translate([-50,-50,-6])
+		pcb_mount();
 	}
 }
 

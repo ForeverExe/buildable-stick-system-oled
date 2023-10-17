@@ -18,11 +18,30 @@
 
 include <components.scad>
 
+//decide whether add a pcb mount
+switch=true;
+oled = true;
+
+oled_x = -60;
+oled_y = -60;
+
 module dir_arc_plus_w_24mm_8_button_panel() {
 	difference() {
 		top_plate_with_raised_overhang();
-		translate([-71.5, -top_plate_y/2+122.5, 0]) dir_arc_24mm_8_button_compressed();
-		translate([-34.5, 51, 0]) button_24mm_hole();
+		if(!switch){
+			translate([-71.5, -top_plate_y/2+122.5, 0]) dir_arc_24mm_8_button_compressed();
+			translate([-34.5, 51, 0]) button_24mm_hole();
+		}
+		else{
+			translate([-71.5, -top_plate_y/2+122.5, -3.5]) sw_dir_arc_24mm_8_button_compressed();
+			translate([-34.5, 51, -3.5]) switch_socket_24mm();
+		}
+		if(oled){
+			translate([oled_x, oled_y, -0.5]){
+					OLED_Display_pcb();
+					OLED_Display_pins();
+			}
+		}
 	}
 }
 

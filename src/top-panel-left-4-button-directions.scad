@@ -21,8 +21,8 @@ include <components.scad>
 oled = true;
 switches = true;
 
-oled_place_x = -70;
-oled_place_y = 70;
+oled_x = -60;
+oled_y = 60;
 
 module top_panel_hitbox_directions(){
     difference(){
@@ -34,11 +34,10 @@ module top_panel_hitbox_directions(){
                 else
                     //it should give 1.5 mm thickness to lock it in place
                     translate([27, 30,-3.5])
-                    switch_hole_4_directionals();
+                    sw_hole_4_directionals();
         }  
         if(oled){
-            //change to hearts content
-            translate([oled_place_x, oled_place_y, -0.5]){
+            translate([oled_x, oled_y, -0.5]){
                 OLED_Display_pcb();
                 OLED_Display_pins();
             }

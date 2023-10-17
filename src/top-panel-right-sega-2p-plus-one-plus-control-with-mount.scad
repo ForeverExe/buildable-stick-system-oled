@@ -19,9 +19,14 @@
 include <components.scad>
 use <top-panel-right-sega-2p-plus-one-plus-control.scad>
 
+pico = false; //change to false if you have a simple raspberry pico as a board.
+
 module top_panel_right_sega_2p_plus_one_plus_control_with_mount() {
 	top_panel_right_sega_2p_plus_one_plus_control();
-	translate([30, -50, -(top_plate_z/2) - 3]) pcb_mount();
+	if(!pico)
+		translate([-5, -50, -(top_plate_z/2) - 3]) pcb_mount();
+	else
+		translate([30, -50, -(top_plate_z/2) - 3]) pico_mount();
 }
 
 top_panel_right_sega_2p_plus_one_plus_control_with_mount();

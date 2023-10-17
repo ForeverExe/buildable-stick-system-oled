@@ -18,6 +18,14 @@
 
 include <components.scad>
 
+/////change as desired//////
+switch = true;
+oled = true; //better use the 0.96'' measures if you want to put it in there
+
+oled_x = -10;
+oled_y = 75;
+///////////////////////////
+
 module top_panel_solo_lever_and_sega_2p_6_button() {
 	difference() {
 		// base plate
@@ -25,9 +33,21 @@ module top_panel_solo_lever_and_sega_2p_6_button() {
 			top_plate_with_raised_overhang();
 			translate([-60, 18, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
 		}
-		translate([95, -20, 0]) sega_2p_6_button();
+		if(!switch){
+			translate([95, -20, 0]) sega_2p_6_button();
+		}else
+			translate([95, -20, -3.5]) sw_sega_2p_6_button();
+
 		translate([-60, 18, 0]) levermountholes();
+
+			if(oled){
+				translate([oled_x, oled_y, -0.5]){
+						OLED_Display_pcb();
+						OLED_Display_pins();
+				}
+			}
+		}
+		
 	}
-}
 
 top_panel_solo_lever_and_sega_2p_6_button();

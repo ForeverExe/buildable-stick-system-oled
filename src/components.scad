@@ -576,7 +576,7 @@ module sega_2p_6_button() {
 
 module sw_sega_2p_6_button() {
 	// via slagcoin
-	sega_2p_p1();
+	sw_sega_2p_p1();
 	translate([30.5, 11+9, 0]) sw_sega_2p_p1();
 	translate([30.5+36, 11+9, 0]) sw_sega_2p_p1();
 	translate([0, -19-9-11, 0]) sw_sega_2p_p1();

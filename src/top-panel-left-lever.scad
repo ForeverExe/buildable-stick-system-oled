@@ -18,6 +18,9 @@
 
 include <components.scad>
 include <oled_display.scad>
+oled_x = 60;
+oled_y = 50;
+oled = true;
 
 // combine the lever mount and generic plate, with mounting holes
 module top_panel_left_lever() {
@@ -28,15 +31,18 @@ module top_panel_left_lever() {
 			translate([0,-20,0]) top_plate_with_raised_overhang();
 			translate([0, 0, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
            }
-           //move this to heart's (and geometry) content
-            translate([-80,35,-0.8]) 
-                OLED_Display();
+           if(oled){
+            //change to hearts content
+            translate([oled_x, oled_y, -0.5]){
+                OLED_Display_pcb();
+                OLED_Display_pins();
+            }
        }
         
 		// holes to mount the lever
 		levermountholes();
 		side_chopper();
 	}
+	}
 }
-
 top_panel_left_lever();
