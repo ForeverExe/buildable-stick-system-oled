@@ -12,13 +12,14 @@ Notes for "next time".
 ## Forked V4
 - [x] Add a prototype for an oled module to subtract the exact geometry
 - [x] Make the oled "selectable", it uses true-or-false IFs, better than making the same panel with 37 variants
-  - [ ] Add the oled choice to almost every plate
+  - [x] Add the oled choice to almost every plate
 - [x] Try printing a plate with the plastic pins to see if it works
     - Plastic pins are a nono, if someone wants them so bad, it's better to glue some nuts and use them as posts
+    - BUT, I made posts for the raspberry pico mount
 - [x] Make a standard hitbox layout for both left and right plates
   - [x] Make the buttons decorative plates
 
-- [ ] Make keyboard switch holes variants
+- [x] Make keyboard switch holes variants
   - [x] Make base keyboard switch module for geometry subtraction
   - [x] Make switch-version for all layouts
 
