@@ -6,7 +6,7 @@ In every file that permits customization, the first lines are meant for the user
 
 # Customization list 
 ### Misc
-OLED MEASURES: [You have to write them in the components file, there are already the 0.96 and the 1.3 inches versions](src/components.scad)
+OLED MEASURES: [You have to write them in the components file, there are already the 0.96 and the 1.3 inches versions](../src/components.scad)
 
 
 ### Left Panels
