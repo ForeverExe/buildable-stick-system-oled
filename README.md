@@ -46,8 +46,9 @@ What you'll need beyond these objects:
     * 2 10mm M3 hex bolts
     * 2 M3 flange nuts
 * For the OLED Module:
-    * 4 M2 Screws
-    * 4 M2 Nuts
+    * 4 Screws
+    * 4 Nuts
+    (Use M2 for 0.96'' or M3 for 1.3'')
 * Buttons and levers as desired
 * Wiring as required
 
