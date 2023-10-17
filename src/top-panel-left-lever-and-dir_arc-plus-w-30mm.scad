@@ -18,15 +18,33 @@
 
 include <components.scad>
 
+oled = true;
+switch = true;
+
+oled_x = 0;
+oled_y = 70;
+
 module top_panel_left_lever_and_dir_arc_w_30mm() {
 	difference() {
 		union() {
 			top_plate_with_raised_overhang();
 			translate([(-top_plate_x/2)+55, (top_plate_y/2)-75, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
 		}
-		dir_arc_w_30mm();
+		if(!switch)
+			dir_arc_w_30mm();
+		else{
+			translate([0, 0,-3.5])
+			sw_dir_arc_w_30mm();
+		}
 		side_chopper();
 		translate([(-top_plate_x/2)+55, (top_plate_y/2)-75, 0]) levermountholes();
+
+		if(oled){
+            translate([oled_x, oled_y, -0.5]){
+                OLED_Display_pcb();
+                OLED_Display_pins();
+            }
+        }
 	}
 }
 

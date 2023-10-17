@@ -17,7 +17,6 @@
  */
 
 include <components.scad>
-include <oled_display.scad>
 oled_x = 60;
 oled_y = 50;
 oled = true;
