@@ -18,6 +18,10 @@ Notes for "next time".
 - [x] Make a standard hitbox layout for both left and right plates
   - [x] Make the buttons decorative plates
 
+- [ ] Make keyboard switch holes variants
+  - [x] Make base keyboard switch module for geometry subtraction
+  - [x] Make switch-version for all layouts
+
 * What about using something like door hinges to access the inside? It would not probably need any premade hole, drill it on wherever you want on the plate would be a better option.
 
 ## Vx
@@ -27,10 +31,5 @@ Notes for "next time".
     - [ ] Move the side buttons to the top plates
     - [ ] Resize the USB-B cable connector, 90% sure it'll change to a standard usb-a/c port, need to know if usb-b is needed for the lever
       - [ ] Decide whether to make a cable or plug hole 
-
-    - [ ] Make keyboard switch holes variants
-      - [x] Make base keyboard switch module for geometry subtraction
-      - [x] Make switch-version for hitbox layouts
-      - [ ] Make switch-version for alla sega_2p layouts
 
 - [ ] Take yet ANOTHER journey to try making the files more modular, mostly a series of true or false statements with user-defined constants on the files, like on `top-panel-left-4-button-directions.scad` and `top-panel-left-lever-oled.scad`, or by using module arguments to decide these components blown up demos. This could be a proof for some other future concepts, but I'm running wild with my fantasy for now.
