@@ -6,29 +6,29 @@ In every file that permits customization, the first lines are meant for the user
 
 # Customization list 
 ### Misc
-OLED MEASURES: [You have to write them in the components file, there are already the 0.96 and the 1.3 inches versions](src\components.scad)
+OLED MEASURES: [You have to write them in the components file, there are already the 0.96 and the 1.3 inches versions](components.scad)
 
 
 ### Left Panels
-- [top-panel-left-4-button-directions](src\top-panel-left-4-button-directions.scad) [ OLED - Switch ]
-- [top-panel-left-lever-and-dir_arc-plus-w-30mm](src\top-panel-left-lever-and-dir_arc-plus-w-30mm.scad) [ OLED - Switch ]
+- [top-panel-left-4-button-directions](top-panel-left-4-button-directions.scad) [ OLED - Switch ]
+- [top-panel-left-lever-and-dir_arc-plus-w-30mm](top-panel-left-lever-and-dir_arc-plus-w-30mm.scad) [ OLED - Switch ]
 
 ### Middle Panels
-- [top-panel-middle-dir_arc-plus-w-30mm](src\top-panel-middle-dir_arc-plus-w-30mm.scad) [ OLED - Switch ]
-    - [top-panel-middle-dir_arc-plus-w-30mm-with-mount](src\top-panel-middle-dir_arc-plus-w-30mm-with-mount.scad) [ PCB ]
-- [top-panel-middle-dir_arc-plus-w-30mm](src\top-panel-middle-dir_arc-plus-w-30mm.scad) [ OLED - Switch ]
+- [top-panel-middle-dir_arc-plus-w-30mm](top-panel-middle-dir_arc-plus-w-30mm.scad) [ OLED - Switch ]
+    - [top-panel-middle-dir_arc-plus-w-30mm-with-mount](top-panel-middle-dir_arc-plus-w-30mm-with-mount.scad) [ PCB ]
+- [top-panel-middle-dir_arc-plus-w-30mm](top-panel-middle-dir_arc-plus-w-30mm.scad) [ OLED - Switch ]
 
 ### Right Panels
-- [top-panel-right-hitbox-6-buttons](src\top-panel-right-hitbox-6-buttons.scad) [ OLED - Switch ]
+- [top-panel-right-hitbox-6-buttons](top-panel-right-hitbox-6-buttons.scad) [ OLED - Switch ]
 
-- [top-panel-right-sega-2p-plus-one-plus-control](src\top-panel-right-sega-2p-plus-one-plus-control.scad) [ OLED - Switch ]
-    - [top-panel-right-sega-2p-plus-one-plus-control-with-mount](src\top-panel-right-sega-2p-plus-one-plus-control-with-mount.scad) [ PCB ]
+- [top-panel-right-sega-2p-plus-one-plus-control](top-panel-right-sega-2p-plus-one-plus-control.scad) [ OLED - Switch ]
+    - [top-panel-right-sega-2p-plus-one-plus-control-with-mount](top-panel-right-sega-2p-plus-one-plus-control-with-mount.scad) [ PCB ]
 
-- [top-panel-right-sega-2p-plus-one](src\top-panel-right-sega-2p-plus-one.scad) [ OLED - Switch ]
-    - [top-panel-right-sega-2p-plus-one-with-mount](src\top-panel-right-sega-2p-plus-one-with-mount.scad) [ PCB ]
+- [top-panel-right-sega-2p-plus-one](top-panel-right-sega-2p-plus-one.scad) [ OLED - Switch ]
+    - [top-panel-right-sega-2p-plus-one-with-mount](top-panel-right-sega-2p-plus-one-with-mount.scad) [ PCB ]
 
 ### Solo Panels
-- [top-panel-solo-dir_arc-24mm-6-button](src\top-panel-solo-dir_arc-24mm-6-button.scad) [ OLED - Switch - PCB ]
-- [top-panel-solo-dir_arc-plus-w-24mm-8-button](src\top-panel-solo-dir_arc-plus-w-24mm-8-button.scad) [ OLED - Switch ]
-- [top-panel-solo-lever-and-sega-2p-6-button](src\top-panel-solo-lever-and-sega-2p-6-button.scad) [ OLED - Switch ]
+- [top-panel-solo-dir_arc-24mm-6-button](top-panel-solo-dir_arc-24mm-6-button.scad) [ OLED - Switch - PCB ]
+- [top-panel-solo-dir_arc-plus-w-24mm-8-button](top-panel-solo-dir_arc-plus-w-24mm-8-button.scad) [ OLED - Switch ]
+- [top-panel-solo-lever-and-sega-2p-6-button](top-panel-solo-lever-and-sega-2p-6-button.scad) [ OLED - Switch ]
 
