@@ -43,7 +43,8 @@ module top_panel_hitbox_directions(){
             }
         }
     }
+    translate([-10,-60,-5.5])
+    pico_mount();
 }
 
-//projection() translate([0,0,0]) rotate([0,0,0])
 top_panel_hitbox_directions();

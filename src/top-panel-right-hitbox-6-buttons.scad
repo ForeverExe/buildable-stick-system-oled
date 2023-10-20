@@ -1,6 +1,6 @@
 include <components.scad>
 switches = true;
-oled = true;
+oled = false;
 oled_place_x = 70;
 oled_place_y = 70;
 

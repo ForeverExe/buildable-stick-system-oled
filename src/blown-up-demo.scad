@@ -47,20 +47,17 @@ color("black") translate([frame_x/2+25, 0, -2.5]) right_frame();
 color("#C12E1F") translate([-top_plate_x/2-25, 0, -5-frame_z/2-75]) bottom_panel_left();
 color("#C12E1F") translate([top_plate_x/2+25, 0, -5-frame_z/2-75]) bottom_panel_right();
 
-translate([50,-200,50])
-pico_mount();
 
 //decors
 color("black") translate([0, 0, 3+frame_z/2+150]){
    
     //dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate();
 }
-color("black") translate([-195, 25, 3+frame_z/2+150]){ 
+color("black") translate([-125, 25, 3+frame_z/2+150]){ 
     //lsx_nobi_dustwasher();
         dir_arc_24mm_directionals_decorative_plate();
 }
 color("black") translate([top_plate_x, 25, 3+frame_z/2+150]){
     translate([-70,-20,0])
         hitbox_r_24mm_decorative_plate();
-    button_24mm_decorative_plate();
 }
