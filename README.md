@@ -61,6 +61,9 @@ Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
 * Left and right top panels: **~$6.74 USD** (~135g each, as of 2023-09-12)
 * Left and right bottom panels: **$5.90 USD** (118.16g each, as of 2023-09-12)
 * Miscellaneous mounting plates, decorative plates, etc.: **~$1.00 USD** (~40g, as of 2023-09-12)
+* 4 M2 nuts to hold the 0.96" OLED module on the plate (you can get a pack of 100 on amazon for ~$12,73, as of 2023-10-24)
+  * If you have a 1.3" OLED, you can get the M3 version for ~$11,67, as of 2023-10-24 
+* 4 M2 bolts **if you have a 0.96" OLED** 
 * 8 16mm M4 bolts to connect the frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
 * 8 M4 flange nuts to connect the frames: **$0.68 USD** (you can get a pack of 100 on Amazon for $8.50, as of 2023-09-12)
 * 4 10mm M3 bolts to connect Neutrik D plates to frames: **$0.40 USD** (you can get a pack of 100 on Amazon for $10, as
