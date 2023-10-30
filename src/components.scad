@@ -284,10 +284,10 @@ module pcb_mount() {
 }
 
 module pico_mount(){
-	translate([-2, 12.1, 0]) m2_mount_post();
+	translate([-2, 11.5, 0]) m2_mount_post();
 	translate([-2, 0, 0]) m2_mount_post();
-	translate([-44, 12.1, 0]) m2_mount_post();
-	translate([-44, 0, 0]) m2_mount_post();
+	translate([-47, 11.5, 0]) m2_mount_post();
+	translate([-47, 0, 0]) m2_mount_post();
 }
 
 /* PIECES */
