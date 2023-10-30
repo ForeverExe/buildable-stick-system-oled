@@ -22,8 +22,8 @@ module top_panel_right_hitbox_8_buttons(){
                 OLED_Display_pins();
             }
         }
-        
-        
+        translate([-241,0,0])
+        side_chopper();
     }
 }
 

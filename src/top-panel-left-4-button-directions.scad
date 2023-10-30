@@ -33,7 +33,7 @@ module top_panel_hitbox_directions(){
                     dir_arc_24mm_directionals();
                 else
                     //it should give 1.5 mm thickness to lock it in place
-                    translate([27, 30,-3.5])
+                    translate([24, 30,-3.5])
                     sw_hole_4_directionals();
         }  
         if(oled){
@@ -42,6 +42,8 @@ module top_panel_hitbox_directions(){
                 OLED_Display_pins();
             }
         }
+        translate([0,0,0])
+        side_chopper();
     }
     translate([-10,-60,-5.5])
     pico_mount();
